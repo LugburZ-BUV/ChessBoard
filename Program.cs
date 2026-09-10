@@ -21,7 +21,7 @@ class Program
         string black = Console.ReadLine();
 
         Console.Write("Ange ruta för din pjäs med kolumn,rad (t.ex. E5): ");
-        // This is the position of the piece on the chessboard, in the format "row,column"
+        // This is the position of the piece on the chessboard, in the format "row,column" with ToUpper to get uppercase
         string queenPosit = Console.ReadLine().ToUpper();
 
         Console.Write("Ange symbolen för din pjäs: ");
@@ -32,13 +32,14 @@ class Program
         // This is the loop that creates the chessboard pattern
         // for each row, we loop through enough columns to match the width
         // and we loop enough rows to match the width as well
+        // we add " " after each symbol to match the spaces between the rows
         for (int row = 1; row <= width; row++)
         {
                 // Loop for the columns
             for (int column = 1; column <= width; column++)
                 // Check if the current position matches the queenPosit
-                // We treat the first character of the queenPosit as a column (A=1, B=2, etc.) and the second character as a row (1-9)
-                // By using [0] and [1] we can get the characters from the string 
+                // We treat the first character of the queenPosit as a column (letter) and the second character as a row (number)
+                // By using [0] and [1] we can get the characters from the string
                 // We subtract '0' (48) from the row character, and 'A' (65) from the column character to convert the characters to numbers
                 // which gives us the correct number of times we need to run the loop before we print the queenSymbol
                 // We add 1 to the column character so A = 1 when we loop through the columns
