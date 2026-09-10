@@ -38,10 +38,10 @@ class Program
             for (int column = 1; column <= width; column++)
                 // Check if the current position matches the queenPosit
                 // We treat the first character of the queenPosit as a column (A=1, B=2, etc.) and the second character as a row (1-9)
-                // By using [0] and [1] we can get the characters from the string and convert them to ints
-                // We subtract '0' (48) from the row character, and 'A' (65) from the column character to get regular numbers
-                // We add 1 to the column character so A = 1 when we loop through the columns
+                // By using [0] and [1] we can get the characters from the string 
+                // We subtract '0' (48) from the row character, and 'A' (65) from the column character to convert the characters to numbers
                 // which gives us the correct number of times we need to run the loop before we print the queenSymbol
+                // We add 1 to the column character so A = 1 when we loop through the columns
                 if ( row == queenPosit[1] - '0' && column == queenPosit[0] - 'A' + 1)
                 {
                     // Print the queenSymbol if it matches
